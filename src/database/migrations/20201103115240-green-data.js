@@ -9,7 +9,15 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
+      user_id: {
+        type: Sequelize.INTEGER,
+        references: { model: 'users', key: 'id' },
+      },
       ph: {
+        type: Sequelize.DECIMAL,
+        allowNull: false,
+      },
+      ec: {
         type: Sequelize.DECIMAL,
         allowNull: false,
       },

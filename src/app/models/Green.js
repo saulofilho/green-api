@@ -1,12 +1,16 @@
 const { Sequelize, Model } = require('sequelize');
 
-class Food extends Model {
+class Green extends Model {
   static init(sequelize) {
     super.init(
       {
-        food: Sequelize.STRING,
-        eat: Sequelize.STRING,
+        ph: Sequelize.DECIMAL,
+        ec: Sequelize.DECIMAL,
+        temp_max: Sequelize.DECIMAL,
+        temp_min: Sequelize.DECIMAL,
+        moisture: Sequelize.DECIMAL,
         infos: Sequelize.TEXT,
+        date: Sequelize.DATE,
       },
       {
         sequelize,
@@ -21,4 +25,4 @@ class Food extends Model {
   }
 }
 
-module.exports = Food;
+module.exports = Green;
