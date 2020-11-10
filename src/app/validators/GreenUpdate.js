@@ -3,9 +3,13 @@ const Yup = require('yup');
 module.exports = async (req, res, next) => {
   try {
     const schema = Yup.object().shape({
-      food: Yup.string(),
-      eat: Yup.string(),
-      infos: Yup.string(),
+      ph: Yup.number().required(),
+      ec: Yup.number().required(),
+      temp_max: Yup.number().required(),
+      temp_min: Yup.number().required(),
+      moisture: Yup.number().required(),
+      infos: Yup.string().required(),
+      date: Yup.date().required(),
     });
 
     await schema.validate(req.body, { abortEarly: false });

@@ -8,9 +8,9 @@ class GreenController {
   }
 
   async index(req, res) {
-    const { date } = req.query;
+    const { id } = req.query;
 
-    const greenItem = await Green.findOne({ where: { date: date } });
+    const greenItem = await Green.findOne({ where: { id: id } });
 
     if (greenItem === null) {
       res.json({ error: 'Green not found!' });
@@ -20,7 +20,16 @@ class GreenController {
   }
 
   async store(req, res) {
-    const { ph, ec, temp_max, temp_min, moisture, infos, date } = req.body;
+    const {
+      ph,
+      ec,
+      temp_max,
+      temp_min,
+      moisture,
+      infos,
+      img_id,
+      id,
+    } = req.body;
 
     const addGreen = await Green.create({
       user_id: req.userId,
@@ -30,7 +39,8 @@ class GreenController {
       temp_min,
       moisture,
       infos,
-      date,
+      img_id,
+      id,
     });
 
     return res.json(addGreen);
@@ -45,7 +55,16 @@ class GreenController {
   }
 
   async update(req, res) {
-    const { ph, ec, temp_max, temp_min, moisture, infos, date } = req.body;
+    const {
+      ph,
+      ec,
+      temp_max,
+      temp_min,
+      moisture,
+      infos,
+      img_id,
+      id,
+    } = req.body;
 
     const greenEdit = await Green.findOne({ where: { green: req.body.green } });
 
@@ -60,11 +79,12 @@ class GreenController {
           temp_min,
           moisture,
           infos,
-          date,
+          img_id,
+          id,
         },
         {
           where: {
-            date,
+            id,
           },
         }
       );
@@ -79,7 +99,8 @@ class GreenController {
       temp_min,
       moisture,
       infos,
-      date,
+      img_id,
+      id,
     });
   }
 }

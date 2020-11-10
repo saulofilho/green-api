@@ -1,6 +1,7 @@
 require('./bootstrap');
 
 const cors = require('cors');
+const path = require('path');
 const helmet = require('helmet');
 const express = require('express');
 const routes = require('./routes');
@@ -19,6 +20,10 @@ class App {
     this.server.use(helmet());
     this.server.use(cors());
     this.server.use(express.json());
+    this.server.use(
+      '/imgs',
+      express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
+    );
   }
 
   routes() {

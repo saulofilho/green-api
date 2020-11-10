@@ -1,8 +1,12 @@
 const { Router } = require('express');
+const multer = require('multer');
+const multerConfig = require('./config/multer');
+
 // const User = require('./app/models/User');
 const UserController = require('./app/controllers/UserController');
 const SessionController = require('./app/controllers/SessionController');
 const GreenController = require('./app/controllers/GreenController');
+const ImgController = require('./app/controllers/ImgController');
 
 const validateUserStore = require('./app/validators/UserStore');
 // const validateUserUpdate = require('./app/validators/UserUpdate');
@@ -13,13 +17,14 @@ const validateGreenUpdate = require('./app/validators/GreenUpdate');
 const authMiddleware = require('./app/middlewares/auth');
 
 const routes = new Router();
+const upload = multer(multerConfig);
 
 routes.post('/users', validateUserStore, UserController.store);
-routes.post('/sessions', validateSessionStore, SessionController.store);
+routes.post('/session', validateSessionStore, SessionController.store);
 
 // routes.put('/users', authMiddleware, UserController.update);
 
-routes.get('/data', GreenController.indexAll);
+routes.get('/green', GreenController.indexAll);
 routes.get('/get-day', GreenController.index);
 
 // aplica o middleware em todas as rotas abaixo
@@ -30,5 +35,7 @@ routes.use(authMiddleware);
 routes.post('/green', validateGreenStore, GreenController.store);
 routes.delete('/green/:id', GreenController.delete);
 routes.put('/green', validateGreenUpdate, GreenController.update);
+
+routes.post('/imgs', upload.single('file'), ImgController.store);
 
 module.exports = routes;

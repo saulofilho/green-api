@@ -10,7 +10,6 @@ class Green extends Model {
         temp_min: Sequelize.DECIMAL,
         moisture: Sequelize.DECIMAL,
         infos: Sequelize.TEXT,
-        date: Sequelize.DATE,
       },
       {
         sequelize,
@@ -22,6 +21,7 @@ class Green extends Model {
 
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
+    this.belongsTo(models.Img, { foreignKey: 'img_id', as: 'img' });
   }
 }
 

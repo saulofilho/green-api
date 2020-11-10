@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface) => {
     await queryInterface.bulkInsert(
-      'green-data',
+      'greens',
       [
         {
           ph: 10.2,
@@ -12,7 +12,6 @@ module.exports = {
           temp_min: 2.334,
           moisture: 2.334,
           infos: 'about sadmadf aknw akdapd awdapm camp ww',
-          date: new Date(),
           created_at: new Date(),
           updated_at: new Date(),
         },
@@ -23,7 +22,6 @@ module.exports = {
           temp_min: 2.334,
           moisture: 2.334,
           infos: 'about sadmadf aknw akdapd awdapm camp ww',
-          date: new Date(),
           created_at: new Date(),
           updated_at: new Date(),
         },
@@ -34,7 +32,6 @@ module.exports = {
           temp_min: 2.334,
           moisture: 2.334,
           infos: 'about sadmadf aknw akdapd awdapm camp ww',
-          date: new Date(),
           created_at: new Date(),
           updated_at: new Date(),
         },
@@ -44,6 +41,6 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.bulkDelete('green-data', null, {});
+    await queryInterface.bulkDelete('greens', null, {});
   },
 };
