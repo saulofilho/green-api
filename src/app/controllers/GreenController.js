@@ -1,8 +1,22 @@
 const Green = require('../models/Green');
+const Img = require('../models/Img');
+const User = require('../models/User');
 
 class GreenController {
   async indexAll(req, res) {
-    const dataGreen = await Green.findAll();
+    const dataGreen = await Green.findAll({
+      include: [
+        {
+          model: Img,
+          as: 'img',
+        },
+        {
+          model: User,
+          as: 'user',
+          attributes: ['name', 'email'],
+        },
+      ],
+    });
 
     res.json(dataGreen);
   }

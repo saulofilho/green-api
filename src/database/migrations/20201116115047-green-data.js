@@ -9,9 +9,9 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      user_id: {
+      project_id: {
         type: Sequelize.INTEGER,
-        references: { model: 'users', key: 'id' },
+        references: { model: 'projects', key: 'id' },
       },
       ph: {
         type: Sequelize.DECIMAL,
