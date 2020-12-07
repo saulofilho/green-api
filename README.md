@@ -1,2 +1,2 @@
-# dog-backend
-the backend of dog app.
+# green-api
+the backend of green app.

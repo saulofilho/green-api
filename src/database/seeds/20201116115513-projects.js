@@ -8,18 +8,21 @@ module.exports = {
         {
           name: 'teste',
           infos: 'about sadmadf aknw akdapd awdapm camp ww',
+          tools: 'tesoura',
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
           name: 'colombinha',
           infos: 'about sadmadf aknw akdapd awdapm camp ww',
+          tools: 'tesoura',
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
           name: 'blueberry',
           infos: 'about sadmadf aknw akdapd awdapm camp ww',
+          tools: 'tesoura',
           created_at: new Date(),
           updated_at: new Date(),
         },

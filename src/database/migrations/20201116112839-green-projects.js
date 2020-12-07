@@ -11,6 +11,7 @@ module.exports = {
       },
       user_id: {
         type: Sequelize.INTEGER,
+        allowNull: true,
         references: { model: 'users', key: 'id' },
       },
       name: {
@@ -19,6 +20,10 @@ module.exports = {
       },
       infos: {
         type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      tools: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       created_at: {

@@ -11,6 +11,7 @@ module.exports = {
       },
       project_id: {
         type: Sequelize.INTEGER,
+        allowNull: true,
         references: { model: 'projects', key: 'id' },
       },
       ph: {
@@ -36,6 +37,11 @@ module.exports = {
       infos: {
         type: Sequelize.TEXT,
         allowNull: false,
+      },
+      phases: {
+        type: Sequelize.ENUM,
+        allowNull: false,
+        values: ['one', 'two'],
       },
       created_at: {
         type: Sequelize.DATE,

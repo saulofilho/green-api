@@ -1,19 +1,28 @@
 const Green = require('../models/Green');
 const Img = require('../models/Img');
+const Project = require('../models/Project');
 const User = require('../models/User');
 
 class GreenController {
   async indexAll(req, res) {
     const dataGreen = await Green.findAll({
+      where: { project_id: req.userId },
       include: [
         {
           model: Img,
           as: 'img',
         },
         {
-          model: User,
-          as: 'user',
-          attributes: ['name', 'email'],
+          model: Project,
+          as: 'project',
+          attributes: ['name', 'infos'],
+          include: [
+            {
+              model: User,
+              as: 'user',
+              attributes: ['id', 'name', 'email'],
+            },
+          ],
         },
       ],
     });
@@ -22,14 +31,12 @@ class GreenController {
   }
 
   async index(req, res) {
-    const { id } = req.query;
+    const ProjectItem = await Green.findByPk(req.params.id);
 
-    const greenItem = await Green.findOne({ where: { id: id } });
-
-    if (greenItem === null) {
-      res.json({ error: 'Green not found!' });
+    if (ProjectItem === null) {
+      res.json({ error: 'Project not found!' });
     } else {
-      res.json(greenItem);
+      res.json(ProjectItem);
     }
   }
 
@@ -43,6 +50,7 @@ class GreenController {
       infos,
       img_id,
       id,
+      phases,
     } = req.body;
 
     const addGreen = await Green.create({
@@ -55,6 +63,7 @@ class GreenController {
       infos,
       img_id,
       id,
+      phases,
     });
 
     return res.json(addGreen);
@@ -78,6 +87,7 @@ class GreenController {
       infos,
       img_id,
       id,
+      phases,
     } = req.body;
 
     const greenEdit = await Green.findOne({ where: { green: req.body.green } });
@@ -95,6 +105,7 @@ class GreenController {
           infos,
           img_id,
           id,
+          phases,
         },
         {
           where: {
@@ -115,6 +126,7 @@ class GreenController {
       infos,
       img_id,
       id,
+      phases,
     });
   }
 }

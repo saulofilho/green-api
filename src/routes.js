@@ -2,15 +2,17 @@ const { Router } = require('express');
 const multer = require('multer');
 const multerConfig = require('./config/multer');
 
-// const User = require('./app/models/User');
 const UserController = require('./app/controllers/UserController');
 const SessionController = require('./app/controllers/SessionController');
 const GreenController = require('./app/controllers/GreenController');
+const ProjectController = require('./app/controllers/ProjectController');
 const ImgController = require('./app/controllers/ImgController');
 
 const validateUserStore = require('./app/validators/UserStore');
-// const validateUserUpdate = require('./app/validators/UserUpdate');
 const validateSessionStore = require('./app/validators/SessionStore');
+
+const validateProjectStore = require('./app/validators/ProjectStore');
+
 const validateGreenStore = require('./app/validators/GreenStore');
 const validateGreenUpdate = require('./app/validators/GreenUpdate');
 
@@ -22,19 +24,22 @@ const upload = multer(multerConfig);
 routes.post('/users', validateUserStore, UserController.store);
 routes.post('/session', validateSessionStore, SessionController.store);
 
-// routes.put('/users', authMiddleware, UserController.update);
-
-routes.get('/green', GreenController.indexAll);
-routes.get('/get-day', GreenController.index);
-
 // aplica o middleware em todas as rotas abaixo
 routes.use(authMiddleware);
 
-// routes.put('/users', validateUserUpdate, UserController.update);
+routes.get('/user', UserController.index);
 
+routes.get('/projects', ProjectController.indexAll);
+routes.get('/project/:id', ProjectController.index);
+routes.post('/project', validateProjectStore, ProjectController.store);
+routes.delete('/project/:id', ProjectController.delete);
+routes.put('/project/:id', validateGreenUpdate, ProjectController.update);
+
+routes.get('/greens', GreenController.indexAll);
+routes.get('/green/:id', GreenController.index);
 routes.post('/green', validateGreenStore, GreenController.store);
 routes.delete('/green/:id', GreenController.delete);
-routes.put('/green', validateGreenUpdate, GreenController.update);
+routes.put('/green/:id', validateGreenUpdate, GreenController.update);
 
 routes.post('/imgs', upload.single('file'), ImgController.store);
 

@@ -10,6 +10,10 @@ class Green extends Model {
         temp_min: Sequelize.DECIMAL,
         moisture: Sequelize.DECIMAL,
         infos: Sequelize.TEXT,
+        phases: {
+          type: Sequelize.ENUM,
+          values: ['one', 'two'],
+        },
       },
       {
         sequelize,
