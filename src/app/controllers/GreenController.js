@@ -6,7 +6,6 @@ const User = require('../models/User');
 class GreenController {
   async indexAll(req, res) {
     const dataGreen = await Green.findAll({
-      where: { project_id: req.userId },
       include: [
         {
           model: Img,
@@ -16,6 +15,7 @@ class GreenController {
           model: Project,
           as: 'project',
           attributes: ['name', 'infos'],
+          where: { user_id: req.userId },
           include: [
             {
               model: User,
