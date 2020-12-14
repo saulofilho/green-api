@@ -14,7 +14,15 @@ module.exports = {
         allowNull: true,
         references: { model: 'users', key: 'id' },
       },
-      name: {
+      harvest_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      strain_name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      breeder: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -23,6 +31,22 @@ module.exports = {
         allowNull: false,
       },
       tools: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      nutrients: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      soil: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      pot_size: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      light_schedule: {
         type: Sequelize.STRING,
         allowNull: false,
       },

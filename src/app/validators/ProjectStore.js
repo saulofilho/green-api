@@ -3,9 +3,15 @@ const Yup = require('yup');
 module.exports = async (req, res, next) => {
   try {
     const schema = Yup.object().shape({
-      name: Yup.string().required(),
+      harvest_name: Yup.string().required(),
+      strain_name: Yup.string().required(),
+      breeder: Yup.string().required(),
       infos: Yup.string().required(),
       tools: Yup.string().required(),
+      nutrients: Yup.string().required(),
+      soil: Yup.string().required(),
+      pot_size: Yup.string().required(),
+      light_schedule: Yup.string().required(),
     });
 
     await schema.validate(req.body, { abortEarly: false });

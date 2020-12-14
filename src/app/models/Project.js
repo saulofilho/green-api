@@ -4,9 +4,15 @@ class Project extends Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
+        harvest_name: Sequelize.STRING,
+        strain_name: Sequelize.STRING,
+        breeder: Sequelize.STRING,
         infos: Sequelize.TEXT,
         tools: Sequelize.STRING,
+        nutrients: Sequelize.STRING,
+        soil: Sequelize.STRING,
+        pot_size: Sequelize.STRING,
+        light_schedule: Sequelize.STRING,
       },
       {
         sequelize,

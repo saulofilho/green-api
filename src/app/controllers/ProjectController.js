@@ -28,14 +28,31 @@ class ProjectController {
   }
 
   async store(req, res) {
-    const { id, name, infos, tools } = req.body;
+    const {
+      id,
+      harvest_name,
+      strain_name,
+      breeder,
+      infos,
+      tools,
+      nutrients,
+      soil,
+      pot_size,
+      light_schedule,
+    } = req.body;
 
     const addProject = await Project.create({
       user_id: req.userId,
       id,
-      name,
+      harvest_name,
+      strain_name,
+      breeder,
       infos,
       tools,
+      nutrients,
+      soil,
+      pot_size,
+      light_schedule,
     });
 
     return res.json(addProject);
@@ -50,7 +67,18 @@ class ProjectController {
   }
 
   async update(req, res) {
-    const { id, name, infos, tools } = req.body;
+    const {
+      id,
+      harvest_name,
+      strain_name,
+      breeder,
+      infos,
+      tools,
+      nutrients,
+      soil,
+      pot_size,
+      light_schedule,
+    } = req.body;
 
     const ProjectEdit = await Project.findOne({
       where: { Project: req.body.Project },
@@ -62,9 +90,15 @@ class ProjectController {
       const ProjectEdit = await Project.update(
         {
           id,
-          name,
+          harvest_name,
+          strain_name,
+          breeder,
           infos,
           tools,
+          nutrients,
+          soil,
+          pot_size,
+          light_schedule,
         },
         {
           where: {
@@ -78,9 +112,15 @@ class ProjectController {
 
     return res.json({
       id,
-      name,
+      harvest_name,
+      strain_name,
+      breeder,
       infos,
       tools,
+      nutrients,
+      soil,
+      pot_size,
+      light_schedule,
     });
   }
 }

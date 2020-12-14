@@ -6,23 +6,16 @@ module.exports = {
       'users',
       [
         {
-          name: 'xxx xxx xxx',
-          email: 'teste@testea.com',
+          name: 'Saulo Filho',
+          email: 'hello@saulofilho.com',
           password_hash: '123456',
           created_at: new Date(),
           updated_at: new Date(),
         },
         {
-          name: 'bbb xxx xxx xxx',
-          email: 'teste@testeb.com',
-          password_hash: '1234567',
-          created_at: new Date(),
-          updated_at: new Date(),
-        },
-        {
-          name: 'aaa xxx xxx xxx',
-          email: 'teste@testec.com',
-          password_hash: '12345678',
+          name: 'Refaela',
+          email: 'refa@rafa.com',
+          password_hash: '123456',
           created_at: new Date(),
           updated_at: new Date(),
         },

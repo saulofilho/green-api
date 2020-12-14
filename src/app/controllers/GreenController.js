@@ -14,13 +14,13 @@ class GreenController {
         {
           model: Project,
           as: 'project',
-          attributes: ['name', 'infos'],
+          attributes: ['id'],
           where: { user_id: req.userId },
           include: [
             {
               model: User,
               as: 'user',
-              attributes: ['id', 'name', 'email'],
+              attributes: ['id'],
             },
           ],
         },
@@ -42,6 +42,7 @@ class GreenController {
 
   async store(req, res) {
     const {
+      project_id,
       ph,
       ec,
       temp_max,
@@ -55,6 +56,7 @@ class GreenController {
 
     const addGreen = await Green.create({
       user_id: req.userId,
+      project_id,
       ph,
       ec,
       temp_max,
@@ -79,6 +81,7 @@ class GreenController {
 
   async update(req, res) {
     const {
+      project_id,
       ph,
       ec,
       temp_max,
@@ -97,6 +100,7 @@ class GreenController {
     } else {
       const greenEdit = await Green.update(
         {
+          project_id,
           ph,
           ec,
           temp_max,
@@ -118,6 +122,7 @@ class GreenController {
     }
 
     return res.json({
+      project_id,
       ph,
       ec,
       temp_max,
