@@ -37,6 +37,7 @@ routes.put('/project/:id', validateGreenUpdate, ProjectController.update);
 
 routes.get('/greens', GreenController.indexAll);
 routes.get('/green/:id', GreenController.index);
+routes.get('/teste', GreenController.teste);
 routes.post('/green', validateGreenStore, GreenController.store);
 routes.delete('/green/:id', GreenController.delete);
 routes.put('/green/:id', validateGreenUpdate, GreenController.update);

@@ -6,6 +6,7 @@ const User = require('../models/User');
 class GreenController {
   async indexAll(req, res) {
     const dataGreen = await Green.findAll({
+      order: ['id'],
       include: [
         {
           model: Img,
@@ -40,32 +41,45 @@ class GreenController {
     }
   }
 
+  async teste(req, res) {
+    const ProjectItem = await Green.findAll({
+      logging: console.log(Green.rawAttributes.phase.values),
+      order: ['id'],
+    });
+
+    res.json(ProjectItem);
+  }
+
   async store(req, res) {
     const {
       project_id,
-      ph,
+      ph_water,
+      ph_soil,
       ec,
       temp_max,
       temp_min,
       moisture,
+      air_humidity,
       infos,
       img_id,
       id,
-      phases,
+      phase,
     } = req.body;
 
     const addGreen = await Green.create({
       user_id: req.userId,
       project_id,
-      ph,
+      ph_water,
+      ph_soil,
       ec,
       temp_max,
       temp_min,
       moisture,
+      air_humidity,
       infos,
       img_id,
       id,
-      phases,
+      phase,
     });
 
     return res.json(addGreen);
@@ -82,15 +96,17 @@ class GreenController {
   async update(req, res) {
     const {
       project_id,
-      ph,
+      ph_water,
+      ph_soil,
       ec,
       temp_max,
       temp_min,
       moisture,
+      air_humidity,
       infos,
       img_id,
       id,
-      phases,
+      phase,
     } = req.body;
 
     const greenEdit = await Green.findOne({ where: { green: req.body.green } });
@@ -101,15 +117,17 @@ class GreenController {
       const greenEdit = await Green.update(
         {
           project_id,
-          ph,
+          ph_water,
+          ph_soil,
           ec,
           temp_max,
           temp_min,
           moisture,
+          air_humidity,
           infos,
           img_id,
           id,
-          phases,
+          phase,
         },
         {
           where: {
@@ -123,15 +141,17 @@ class GreenController {
 
     return res.json({
       project_id,
-      ph,
+      ph_water,
+      ph_soil,
       ec,
       temp_max,
       temp_min,
       moisture,
+      air_humidity,
       infos,
       img_id,
       id,
-      phases,
+      phase,
     });
   }
 }

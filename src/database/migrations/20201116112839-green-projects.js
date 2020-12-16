@@ -43,10 +43,14 @@ module.exports = {
         allowNull: false,
       },
       pot_size: {
-        type: Sequelize.STRING,
+        type: Sequelize.DECIMAL,
         allowNull: false,
       },
       light_schedule: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      grow_techniques: {
         type: Sequelize.STRING,
         allowNull: false,
       },

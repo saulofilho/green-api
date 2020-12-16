@@ -39,6 +39,7 @@ class ProjectController {
       soil,
       pot_size,
       light_schedule,
+      grow_techniques,
     } = req.body;
 
     const addProject = await Project.create({
@@ -53,6 +54,7 @@ class ProjectController {
       soil,
       pot_size,
       light_schedule,
+      grow_techniques,
     });
 
     return res.json(addProject);
@@ -78,6 +80,7 @@ class ProjectController {
       soil,
       pot_size,
       light_schedule,
+      grow_techniques,
     } = req.body;
 
     const ProjectEdit = await Project.findOne({
@@ -99,6 +102,7 @@ class ProjectController {
           soil,
           pot_size,
           light_schedule,
+          grow_techniques,
         },
         {
           where: {
@@ -121,6 +125,7 @@ class ProjectController {
       soil,
       pot_size,
       light_schedule,
+      grow_techniques,
     });
   }
 }

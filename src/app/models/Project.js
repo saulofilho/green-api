@@ -11,8 +11,9 @@ class Project extends Model {
         tools: Sequelize.STRING,
         nutrients: Sequelize.STRING,
         soil: Sequelize.STRING,
-        pot_size: Sequelize.STRING,
+        pot_size: Sequelize.DECIMAL,
         light_schedule: Sequelize.STRING,
+        grow_techniques: Sequelize.STRING,
       },
       {
         sequelize,

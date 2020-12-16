@@ -14,7 +14,15 @@ module.exports = {
         allowNull: true,
         references: { model: 'projects', key: 'id' },
       },
-      ph: {
+      infos: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      ph_water: {
+        type: Sequelize.DECIMAL,
+        allowNull: false,
+      },
+      ph_soil: {
         type: Sequelize.DECIMAL,
         allowNull: false,
       },
@@ -34,14 +42,13 @@ module.exports = {
         type: Sequelize.DECIMAL,
         allowNull: false,
       },
-      infos: {
-        type: Sequelize.TEXT,
+      air_humidity: {
+        type: Sequelize.DECIMAL,
         allowNull: false,
       },
-      phases: {
-        type: Sequelize.ENUM,
+      phase: {
+        type: Sequelize.STRING,
         allowNull: false,
-        values: ['one', 'two'],
       },
       created_at: {
         type: Sequelize.DATE,

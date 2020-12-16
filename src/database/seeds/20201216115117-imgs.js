@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           name: 'name teste',
-          path: '/imgs/path',
+          path: 'teste.png',
           created_at: new Date(),
           updated_at: new Date(),
         },

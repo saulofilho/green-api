@@ -4,16 +4,15 @@ class Green extends Model {
   static init(sequelize) {
     super.init(
       {
-        ph: Sequelize.DECIMAL,
+        infos: Sequelize.TEXT,
+        ph_water: Sequelize.DECIMAL,
+        ph_soil: Sequelize.DECIMAL,
         ec: Sequelize.DECIMAL,
         temp_max: Sequelize.DECIMAL,
         temp_min: Sequelize.DECIMAL,
         moisture: Sequelize.DECIMAL,
-        infos: Sequelize.TEXT,
-        phases: {
-          type: Sequelize.ENUM,
-          values: ['one', 'two'],
-        },
+        air_humidity: Sequelize.DECIMAL,
+        phase: Sequelize.STRING,
       },
       {
         sequelize,
