@@ -7,10 +7,11 @@ module.exports = {
       [
         {
           user_id: 1,
+          infos: 'about sadmadf aknw akdapd awdapm camp ww',
           harvest_name: 'The Real One',
           strain_name: 'Northern Lights',
           breeder: 'Seedsman',
-          infos: 'about sadmadf aknw akdapd awdapm camp ww',
+          flowering_type: 'autoflowering',
           tools: 'tesoura, ventilador, exaustor',
           nutrients: 'bio mix',
           soil: 'mix',

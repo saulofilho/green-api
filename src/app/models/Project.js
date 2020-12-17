@@ -7,6 +7,7 @@ class Project extends Model {
         harvest_name: Sequelize.STRING,
         strain_name: Sequelize.STRING,
         breeder: Sequelize.STRING,
+        flowering_type: Sequelize.STRING,
         infos: Sequelize.TEXT,
         tools: Sequelize.STRING,
         nutrients: Sequelize.STRING,

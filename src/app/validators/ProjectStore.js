@@ -6,6 +6,7 @@ module.exports = async (req, res, next) => {
       harvest_name: Yup.string().required(),
       strain_name: Yup.string().required(),
       breeder: Yup.string().required(),
+      flowering_type: Yup.string().required(),
       infos: Yup.string().required(),
       tools: Yup.string().required(),
       nutrients: Yup.string().required(),

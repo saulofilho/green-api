@@ -18,6 +18,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      infos: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
       strain_name: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -26,8 +30,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      infos: {
-        type: Sequelize.TEXT,
+      flowering_type: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
       tools: {

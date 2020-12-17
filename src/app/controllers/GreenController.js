@@ -94,65 +94,11 @@ class GreenController {
   }
 
   async update(req, res) {
-    const {
-      project_id,
-      ph_water,
-      ph_soil,
-      ec,
-      temp_max,
-      temp_min,
-      moisture,
-      air_humidity,
-      infos,
-      img_id,
-      id,
-      phase,
-    } = req.body;
+    const greenEdit = await Green.findByPk(req.params.id);
 
-    const greenEdit = await Green.findOne({ where: { green: req.body.green } });
+    await greenEdit.update(req.body);
 
-    if (greenEdit === null) {
-      res.json({ error: 'Green not found!' });
-    } else {
-      const greenEdit = await Green.update(
-        {
-          project_id,
-          ph_water,
-          ph_soil,
-          ec,
-          temp_max,
-          temp_min,
-          moisture,
-          air_humidity,
-          infos,
-          img_id,
-          id,
-          phase,
-        },
-        {
-          where: {
-            id,
-          },
-        }
-      );
-      console.log(greenEdit instanceof Green);
-      console.log(greenEdit.green);
-    }
-
-    return res.json({
-      project_id,
-      ph_water,
-      ph_soil,
-      ec,
-      temp_max,
-      temp_min,
-      moisture,
-      air_humidity,
-      infos,
-      img_id,
-      id,
-      phase,
-    });
+    return res.json(greenEdit);
   }
 }
 
