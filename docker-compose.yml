@@ -1,12 +1,19 @@
-# docker-compose.yml
 version: '3'
 services:
-  database:
-    image: "postgres" # use latest official postgres version
-    container_name: "green-api"
-    env_file:
-      - .env # configure postgres
+  web:
+    build: .
     volumes:
-      - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
-volumes:
-  database-data: # named volumes can be managed easier using docker-compose
+      - .:/usr/src/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    env_file: .env
+  db:
+    image: postgres:latest
+    container_name: green-api
+    ports:
+      - "5432:5432"
+    env_file: .env
+    volumes:
+      - db:/var/lib/postgresql/data
