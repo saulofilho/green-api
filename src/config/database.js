@@ -3,11 +3,11 @@ require('../bootstrap');
 module.exports = {
   dialect: process.env.DB_DIALECT || 'postgres',
   type: 'postgres',
-  url: process.env.DATABASE_URL,
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  url: 'postgres://postgres:200288@db:5432/green-api',
+  host: 'db',
+  username: 'postgres',
+  password: 200288,
+  database: 'green-api',
   storage: './__tests__/database.sqlite',
   logging: false,
   define: {
