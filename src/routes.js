@@ -12,6 +12,7 @@ const validateUserStore = require('./app/validators/UserStore');
 const validateSessionStore = require('./app/validators/SessionStore');
 
 const validateProjectStore = require('./app/validators/ProjectStore');
+const validateProjectUpdate = require('./app/validators/ProjectUpdate');
 
 const validateGreenStore = require('./app/validators/GreenStore');
 const validateGreenUpdate = require('./app/validators/GreenUpdate');
@@ -33,13 +34,12 @@ routes.get('/projects', ProjectController.indexAll);
 routes.get('/project/:id', ProjectController.index);
 routes.post('/project', validateProjectStore, ProjectController.store);
 routes.delete('/project/:id', ProjectController.delete);
-routes.put('/project/:id', validateGreenUpdate, ProjectController.update);
+routes.put('/project/:id', validateProjectUpdate, ProjectController.update);
 
 routes.get('/greens', GreenController.indexAll);
 routes.get('/green/:id', GreenController.index);
-routes.get('/teste', GreenController.teste);
 routes.post('/green', validateGreenStore, GreenController.store);
-routes.delete('/green/:id', GreenController.delete);
+// routes.delete('/green/:id', GreenController.delete);
 routes.put('/green/:id', validateGreenUpdate, GreenController.update);
 
 routes.post('/imgs', upload.single('file'), ImgController.store);

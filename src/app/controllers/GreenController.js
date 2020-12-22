@@ -41,15 +41,6 @@ class GreenController {
     }
   }
 
-  async teste(req, res) {
-    const ProjectItem = await Green.findAll({
-      logging: console.log(Green.rawAttributes.phase.values),
-      order: ['id'],
-    });
-
-    res.json(ProjectItem);
-  }
-
   async store(req, res) {
     const {
       project_id,

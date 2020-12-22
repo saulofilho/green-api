@@ -63,75 +63,19 @@ class ProjectController {
   }
 
   async delete(req, res) {
-    const Project = await Project.findByPk(req.params.id);
+    const projectDelete = await Project.findByPk(req.params.id);
 
-    await Project.destroy();
+    await projectDelete.destroy();
 
-    return res.json(Project);
+    return res.json(projectDelete);
   }
 
   async update(req, res) {
-    const {
-      id,
-      harvest_name,
-      strain_name,
-      breeder,
-      flowering_type,
-      infos,
-      tools,
-      nutrients,
-      soil,
-      pot_size,
-      light_schedule,
-      grow_techniques,
-    } = req.body;
+    const projectEdit = await Project.findByPk(req.params.id);
 
-    const ProjectEdit = await Project.findOne({
-      where: { Project: req.body.Project },
-    });
+    await projectEdit.update(req.body);
 
-    if (ProjectEdit === null) {
-      res.json({ error: 'Project not found!' });
-    } else {
-      const ProjectEdit = await Project.update(
-        {
-          id,
-          harvest_name,
-          strain_name,
-          breeder,
-          flowering_type,
-          infos,
-          tools,
-          nutrients,
-          soil,
-          pot_size,
-          light_schedule,
-          grow_techniques,
-        },
-        {
-          where: {
-            id,
-          },
-        }
-      );
-      console.log(ProjectEdit instanceof Project);
-      console.log(ProjectEdit.Project);
-    }
-
-    return res.json({
-      id,
-      harvest_name,
-      strain_name,
-      breeder,
-      flowering_type,
-      infos,
-      tools,
-      nutrients,
-      soil,
-      pot_size,
-      light_schedule,
-      grow_techniques,
-    });
+    return res.json(projectEdit);
   }
 }
 
