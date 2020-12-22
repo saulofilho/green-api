@@ -76,14 +76,6 @@ class GreenController {
     return res.json(addGreen);
   }
 
-  async delete(req, res) {
-    const green = await Green.findByPk(req.params.id);
-
-    await green.destroy();
-
-    return res.json(green);
-  }
-
   async update(req, res) {
     const greenEdit = await Green.findByPk(req.params.id);
 

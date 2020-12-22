@@ -39,7 +39,6 @@ routes.put('/project/:id', validateProjectUpdate, ProjectController.update);
 routes.get('/greens', GreenController.indexAll);
 routes.get('/green/:id', GreenController.index);
 routes.post('/green', validateGreenStore, GreenController.store);
-// routes.delete('/green/:id', GreenController.delete);
 routes.put('/green/:id', validateGreenUpdate, GreenController.update);
 
 routes.post('/imgs', upload.single('file'), ImgController.store);
