@@ -16,47 +16,47 @@ module.exports = {
       },
       harvest_name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       infos: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       strain_name: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       breeder: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       flowering_type: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       tools: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       nutrients: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       soil: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       pot_size: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       light_schedule: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       grow_techniques: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       created_at: {
         type: Sequelize.DATE,

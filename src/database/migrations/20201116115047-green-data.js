@@ -16,39 +16,39 @@ module.exports = {
       },
       infos: {
         type: Sequelize.TEXT,
-        allowNull: false,
+        allowNull: true,
       },
       ph_water: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       ph_soil: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       ec: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       temp_max: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       temp_min: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       moisture: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       air_humidity: {
         type: Sequelize.DECIMAL,
-        allowNull: false,
+        allowNull: true,
       },
       phase: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
       },
       created_at: {
         type: Sequelize.DATE,
