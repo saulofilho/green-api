@@ -13,6 +13,8 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: true,
         references: { model: 'projects', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
       },
       infos: {
         type: Sequelize.TEXT,

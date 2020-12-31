@@ -35,7 +35,7 @@ class GreenController {
     const ProjectItem = await Green.findByPk(req.params.id);
 
     if (ProjectItem === null) {
-      res.json({ error: 'Project not found!' });
+      res.json({ error: 'Data not found!' });
     } else {
       res.json(ProjectItem);
     }

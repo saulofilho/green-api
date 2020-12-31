@@ -6,8 +6,8 @@ module.exports = {
       'projects',
       [
         {
-          user_id: 1,
-          infos: 'about sadmadf aknw akdapd awdapm camp ww',
+          infos:
+            'An aurora (plural: auroras or aurorae),[a] sometimes referred to as polar lights (aurora polaris), northern lights (aurora borealis), or southern lights (aurora australis), is a natural light display in the Earths sky, predominantly seen in high-latitude regions (around the Arctic and Antarctic).',
           harvest_name: 'The Real One',
           strain_name: 'Northern Lights',
           breeder: 'Seedsman',
@@ -30,3 +30,5 @@ module.exports = {
     await queryInterface.bulkDelete('projects', null, {});
   },
 };
+
+// https://stackoverflow.com/questions/23128816/sequelize-js-ondelete-cascade-is-not-deleting-records-sequelize

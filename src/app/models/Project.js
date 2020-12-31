@@ -26,7 +26,6 @@ class Project extends Model {
 
   static associate(models) {
     this.belongsTo(models.User, { foreignKey: 'user_id', as: 'user' });
-    // this.hasMany(models.Green, { foreignKey: 'green_id', as: 'green' });
   }
 }
 
