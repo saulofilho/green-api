@@ -1,5 +1,6 @@
 const Project = require('../models/Project');
 const User = require('../models/User');
+const Green = require('../models/Green');
 
 class ProjectController {
   async indexAll(req, res) {
@@ -10,6 +11,22 @@ class ProjectController {
           model: User,
           as: 'user',
           attributes: ['name', 'email'],
+        },
+        {
+          model: Green,
+          as: 'green',
+          attributes: [
+            'id',
+            'infos',
+            'ph_water',
+            'ph_soil',
+            'ec',
+            'temp_max',
+            'temp_min',
+            'moisture',
+            'air_humidity',
+            'phase',
+          ],
         },
       ],
     });

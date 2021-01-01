@@ -30,5 +30,3 @@ module.exports = {
     await queryInterface.bulkDelete('projects', null, {});
   },
 };
-
-// https://stackoverflow.com/questions/23128816/sequelize-js-ondelete-cascade-is-not-deleting-records-sequelize

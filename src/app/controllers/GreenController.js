@@ -21,7 +21,7 @@ class GreenController {
             {
               model: User,
               as: 'user',
-              attributes: ['id'],
+              attributes: ['id', 'email'],
             },
           ],
         },
