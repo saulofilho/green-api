@@ -12,6 +12,7 @@ class Green extends Model {
         temp_min: Sequelize.DECIMAL,
         moisture: Sequelize.DECIMAL,
         air_humidity: Sequelize.DECIMAL,
+        // plant_size: Sequelize.DECIMAL,
         phase: Sequelize.STRING,
       },
       {

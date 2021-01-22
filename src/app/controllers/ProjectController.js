@@ -6,6 +6,25 @@ class ProjectController {
   async indexAll(req, res) {
     const dataProject = await Project.findAll({
       where: { user_id: req.userId },
+      order: ['id'],
+      include: [
+        {
+          model: User,
+          as: 'user',
+          attributes: ['name', 'email'],
+        },
+      ],
+    });
+
+    res.json(dataProject);
+  }
+
+  async index(req, res) {
+    const { page = 1 } = req.query;
+
+    const ProjectItem = await Project.findByPk(req.params.id, {
+      where: { user_id: req.userId },
+      order: ['id'],
       include: [
         {
           model: User,
@@ -15,6 +34,9 @@ class ProjectController {
         {
           model: Green,
           as: 'green',
+          order: ['id'],
+          limit: 7,
+          offset: (page - 1) * 7,
           attributes: [
             'id',
             'infos',
@@ -34,12 +56,6 @@ class ProjectController {
         },
       ],
     });
-
-    res.json(dataProject);
-  }
-
-  async index(req, res) {
-    const ProjectItem = await Project.findByPk(req.params.id);
 
     if (ProjectItem === null) {
       res.json({ error: 'Project not found!' });

@@ -8,6 +8,7 @@ class GreenController {
     const { page = 1 } = req.query;
 
     const dataGreen = await Green.findAll({
+      where: { project_id: 1 },
       order: ['id'],
       limit: 7,
       offset: (page - 1) * 7,
@@ -60,6 +61,7 @@ class GreenController {
       img_id,
       id,
       phase,
+      // plant_size
     } = req.body;
 
     const addGreen = await Green.create({
@@ -76,6 +78,7 @@ class GreenController {
       img_id,
       id,
       phase,
+      // plant_size
     });
 
     return res.json(addGreen);

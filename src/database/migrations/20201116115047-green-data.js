@@ -48,6 +48,10 @@ module.exports = {
         type: Sequelize.DECIMAL,
         allowNull: true,
       },
+      plant_size: {
+        type: Sequelize.DECIMAL,
+        allowNull: true,
+      },
       phase: {
         type: Sequelize.STRING,
         allowNull: true,
