@@ -1,7 +1,7 @@
 const Project = require('../models/Project');
 const User = require('../models/User');
 const Green = require('../models/Green');
-
+const Img = require('../models/Img');
 class ProjectController {
   async indexAll(req, res) {
     const dataProject = await Project.findAll({
@@ -74,6 +74,13 @@ class ProjectController {
             'img_id',
             'createdAt',
             'updatedAt',
+          ],
+          include: [
+            {
+              model: Img,
+              as: 'img',
+              attributes: ['id', 'path', 'url', 'name'],
+            },
           ],
         },
       ],
