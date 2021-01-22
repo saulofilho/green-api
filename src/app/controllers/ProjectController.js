@@ -13,6 +13,28 @@ class ProjectController {
           as: 'user',
           attributes: ['name', 'email'],
         },
+        {
+          model: Green,
+          as: 'green',
+          order: [['createdAt', 'DESC']],
+          limit: 30,
+          attributes: [
+            'id',
+            'infos',
+            'ph_water',
+            'ph_soil',
+            'ec',
+            'temp_max',
+            'temp_min',
+            'moisture',
+            'air_humidity',
+            'phase',
+            'project_id',
+            'img_id',
+            'createdAt',
+            'updatedAt',
+          ],
+        },
       ],
     });
 

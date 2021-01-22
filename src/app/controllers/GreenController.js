@@ -5,13 +5,8 @@ const User = require('../models/User');
 
 class GreenController {
   async indexAll(req, res) {
-    const { page = 1 } = req.query;
-
     const dataGreen = await Green.findAll({
-      where: { project_id: 1 },
       order: ['id'],
-      limit: 7,
-      offset: (page - 1) * 7,
       include: [
         {
           model: Img,
