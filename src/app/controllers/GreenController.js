@@ -1,37 +1,6 @@
 const Green = require('../models/Green');
-const Img = require('../models/Img');
-const Project = require('../models/Project');
-const User = require('../models/User');
 
 class GreenController {
-  async indexAll(req, res) {
-    const dataGreen = await Green.findAll({
-      order: ['id'],
-      include: [
-        {
-          model: Img,
-          as: 'img',
-          attributes: ['id', 'path', 'url', 'name'],
-        },
-        {
-          model: Project,
-          as: 'project',
-          attributes: ['id'],
-          where: { user_id: req.userId },
-          include: [
-            {
-              model: User,
-              as: 'user',
-              attributes: ['id', 'email'],
-            },
-          ],
-        },
-      ],
-    });
-
-    res.json(dataGreen);
-  }
-
   async index(req, res) {
     const ProjectItem = await Green.findByPk(req.params.id);
 

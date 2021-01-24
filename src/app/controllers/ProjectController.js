@@ -57,8 +57,8 @@ class ProjectController {
           model: Green,
           as: 'green',
           order: ['id'],
-          limit: 7,
-          offset: (page - 1) * 7,
+          limit: 30,
+          offset: (page - 1) * 30,
           attributes: [
             'id',
             'infos',
