@@ -464,7 +464,7 @@ module.exports = {
           temp_min: 16,
           moisture: 73,
           air_humidity: 63,
-          plant_size: 1.34,
+          plant_size: 1.44,
           phase: 'germination',
           created_at: '2021-01-29T11:55:29.946Z',
           updated_at: new Date(),
@@ -480,7 +480,7 @@ module.exports = {
           temp_min: 16,
           moisture: 73,
           air_humidity: 63,
-          plant_size: 1.34,
+          plant_size: 1.32,
           phase: 'germination',
           created_at: '2021-01-30T11:55:29.946Z',
           updated_at: new Date(),
@@ -498,7 +498,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-01T11:55:29.946Z',
+          created_at: '2021-02-01T11:15:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -514,7 +514,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-02T11:55:29.946Z',
+          created_at: '2021-01-02T11:55:21.946Z',
           updated_at: new Date(),
         },
         {
@@ -530,7 +530,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-03T11:55:29.946Z',
+          created_at: '2021-01-03T11:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -546,7 +546,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-04T11:55:29.946Z',
+          created_at: '2021-03-04T11:35:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -562,7 +562,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-05T11:55:29.946Z',
+          created_at: '2021-04-05T11:54:19.946Z',
           updated_at: new Date(),
         },
         {
@@ -578,7 +578,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-06T11:55:29.946Z',
+          created_at: '2021-06-06T02:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -594,7 +594,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-07T11:55:29.946Z',
+          created_at: '2021-05-07T03:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -610,7 +610,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-08T11:55:29.946Z',
+          created_at: '2021-07-08T11:55:39.946Z',
           updated_at: new Date(),
         },
         {
@@ -626,7 +626,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-09T11:55:29.946Z',
+          created_at: '2021-08-09T12:15:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -642,7 +642,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-10T11:55:29.946Z',
+          created_at: '2021-09-10T10:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -722,7 +722,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-15T11:55:29.946Z',
+          created_at: '2021-12-15T10:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -754,7 +754,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-02-17T11:55:29.946Z',
+          created_at: '2021-11-17T11:55:49.946Z',
           updated_at: new Date(),
         },
         {
@@ -1506,7 +1506,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-04-06T11:55:29.946Z',
+          created_at: '2021-03-06T11:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -1538,7 +1538,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-04-08T11:55:29.946Z',
+          created_at: '2021-03-08T11:55:19.946Z',
           updated_at: new Date(),
         },
         {
@@ -1554,7 +1554,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-04-09T11:55:29.946Z',
+          created_at: '2021-02-09T11:55:29.946Z',
           updated_at: new Date(),
         },
         {
@@ -1570,7 +1570,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-04-10T11:55:29.946Z',
+          created_at: '2021-04-10T11:55:21.946Z',
           updated_at: new Date(),
         },
         {
@@ -1602,7 +1602,7 @@ module.exports = {
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'germination',
-          created_at: '2021-04-12T11:55:29.946Z',
+          created_at: '2021-11-12T11:15:29.946Z',
           updated_at: new Date(),
         },
       ],

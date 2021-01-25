@@ -25,7 +25,7 @@ class GreenController {
       img_id,
       id,
       phase,
-      // plant_size
+      plant_size,
     } = req.body;
 
     const addGreen = await Green.create({
@@ -42,7 +42,7 @@ class GreenController {
       img_id,
       id,
       phase,
-      // plant_size
+      plant_size,
     });
 
     return res.json(addGreen);
