@@ -7,12 +7,13 @@ module.exports = {
       [
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
           ph_soil: 7.1,
           ec: 11.223,
-          temp_max: 31,
+          temp_max: 30,
           temp_min: 16,
           moisture: 73,
           air_humidity: 63,
@@ -23,12 +24,13 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
           ph_soil: 7.1,
           ec: 11.223,
-          temp_max: 31,
+          temp_max: 21,
           temp_min: 16,
           moisture: 73,
           air_humidity: 63,
@@ -39,6 +41,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -55,6 +58,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -71,6 +75,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -79,22 +84,23 @@ module.exports = {
           temp_max: 31,
           temp_min: 16,
           moisture: 73,
-          air_humidity: 63,
-          plant_size: 1.34,
+          air_humidity: 33,
+          plant_size: 0.34,
           phase: 'seeding',
           created_at: '2021-01-05T11:55:29.946Z',
           updated_at: new Date(),
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
           ph_soil: 7.1,
           ec: 11.223,
           temp_max: 31,
-          temp_min: 16,
-          moisture: 73,
+          temp_min: 12,
+          moisture: 23,
           air_humidity: 63,
           plant_size: 1.34,
           phase: 'seeding',
@@ -103,13 +109,14 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
           ph_soil: 7.1,
           ec: 11.223,
-          temp_max: 31,
-          temp_min: 16,
+          temp_max: 29,
+          temp_min: 15,
           moisture: 73,
           air_humidity: 63,
           plant_size: 1.34,
@@ -119,6 +126,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -135,6 +143,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -151,6 +160,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -167,6 +177,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -176,16 +187,17 @@ module.exports = {
           temp_min: 16,
           moisture: 73,
           air_humidity: 63,
-          plant_size: 1.34,
+          plant_size: 1.53,
           phase: 'seeding',
           created_at: '2021-01-11T11:55:29.946Z',
           updated_at: new Date(),
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
-          ph_water: 6.2,
+          ph_water: 6.1,
           ph_soil: 7.1,
           ec: 11.223,
           temp_max: 31,
@@ -199,6 +211,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -215,10 +228,11 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
-          ph_soil: 7.1,
+          ph_soil: 4.1,
           ec: 11.223,
           temp_max: 31,
           temp_min: 16,
@@ -231,6 +245,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -247,6 +262,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -263,6 +279,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -279,6 +296,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -295,6 +313,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -311,6 +330,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -327,6 +347,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -343,6 +364,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -359,6 +381,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -375,6 +398,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -391,6 +415,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -407,6 +432,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -423,6 +449,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -439,6 +466,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -455,6 +483,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -471,6 +500,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -487,6 +517,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -503,6 +534,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -519,6 +551,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -535,6 +568,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -551,6 +585,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -567,6 +602,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -583,6 +619,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -599,6 +636,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -615,6 +653,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -631,6 +670,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -647,6 +687,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -663,6 +704,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -679,6 +721,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -695,6 +738,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -711,6 +755,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -727,6 +772,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -743,6 +789,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -759,6 +806,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -775,6 +823,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -791,6 +840,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -807,6 +857,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -823,6 +874,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,
@@ -839,6 +891,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -855,6 +908,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -871,6 +925,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -887,6 +942,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -903,6 +959,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -919,6 +976,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -935,6 +993,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -951,6 +1010,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -967,6 +1027,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -983,6 +1044,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -999,6 +1061,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1015,6 +1078,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1031,6 +1095,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1047,6 +1112,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1063,6 +1129,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1079,6 +1146,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1095,6 +1163,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1111,6 +1180,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1127,6 +1197,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1143,6 +1214,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1159,6 +1231,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1175,6 +1248,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1191,6 +1265,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1207,6 +1282,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1223,6 +1299,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1239,6 +1316,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1255,6 +1333,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1271,6 +1350,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1287,6 +1367,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1303,6 +1384,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1319,6 +1401,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1335,6 +1418,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1351,6 +1435,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1367,6 +1452,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1383,6 +1469,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1399,6 +1486,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1415,6 +1503,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1431,6 +1520,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1447,6 +1537,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1463,6 +1554,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1479,6 +1571,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1495,6 +1588,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1511,6 +1605,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1527,6 +1622,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1543,6 +1639,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1559,6 +1656,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1575,6 +1673,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 10.2,
@@ -1591,6 +1690,7 @@ module.exports = {
         },
         {
           project_id: 1,
+          img_id: 1,
           infos:
             'Auroras are the result of disturbances in the magnetosphere caused by solar wind. These disturbances are sometimes strong enough to alter the trajectories of charged particles in both solar wind and magnetospheric plasma. These particles, mainly electrons and protons, precipitate into the upper atmosphere (thermosphere/exosphere).',
           ph_water: 6.2,

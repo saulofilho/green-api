@@ -6,9 +6,10 @@ module.exports = {
       'projects',
       [
         {
+          user_id: 1,
+          harvest_name: 'The Real One',
           infos:
             'An aurora (plural: auroras or aurorae),[a] sometimes referred to as polar lights (aurora polaris), northern lights (aurora borealis), or southern lights (aurora australis), is a natural light display in the Earths sky, predominantly seen in high-latitude regions (around the Arctic and Antarctic).',
-          harvest_name: 'The Real One',
           strain_name: 'Northern Lights',
           breeder: 'Seedsman',
           flowering_type: 'autoflowering',
