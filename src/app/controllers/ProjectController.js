@@ -9,6 +9,39 @@ class ProjectController {
       order: ['id'],
       include: [
         {
+          model: Green,
+          as: 'green',
+          order: [['id']],
+          attributes: [
+            'id',
+            'infos',
+            'ph_water',
+            'ph_soil',
+            'ec',
+            'temp_max',
+            'temp_min',
+            'moisture',
+            'air_humidity',
+            'plant_size',
+            'phase',
+            'project_id',
+            'img_id',
+            'createdAt',
+            'updatedAt',
+          ],
+        },
+      ],
+    });
+
+    res.json(dataProject);
+  }
+
+  async indexAllLimit(req, res) {
+    const dataProject = await Project.findAll({
+      where: { user_id: req.userId },
+      order: ['id'],
+      include: [
+        {
           model: User,
           as: 'user',
           attributes: ['name', 'email'],
@@ -17,7 +50,7 @@ class ProjectController {
           model: Green,
           as: 'green',
           order: [['createdAt', 'DESC']],
-          limit: 28,
+          limit: 30,
           attributes: [
             'id',
             'infos',

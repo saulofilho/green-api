@@ -30,11 +30,12 @@ routes.use(authMiddleware);
 
 routes.get('/user', UserController.index);
 
-routes.get('/projects', ProjectController.indexAll);
-routes.get('/project/:id', ProjectController.index);
-routes.post('/project', validateProjectStore, ProjectController.store);
-routes.delete('/project/:id', ProjectController.delete);
-routes.put('/project/:id', validateProjectUpdate, ProjectController.update);
+routes.get('/harvests', ProjectController.indexAll);
+routes.get('/harvest/:id', ProjectController.index);
+routes.post('/harvest', validateProjectStore, ProjectController.store);
+routes.delete('/harvest/:id', ProjectController.delete);
+routes.put('/harvest/:id', validateProjectUpdate, ProjectController.update);
+routes.get('/harvests-month', ProjectController.indexAllLimit);
 
 routes.get('/green/:id', GreenController.index);
 routes.post('/green', validateGreenStore, GreenController.store);
