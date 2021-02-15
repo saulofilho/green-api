@@ -37,6 +37,8 @@ class ProjectController {
   }
 
   async indexAllLimit(req, res) {
+    const { page = 1 } = req.query;
+
     const dataProject = await Project.findAll({
       where: { user_id: req.userId },
       order: ['id'],
@@ -51,6 +53,7 @@ class ProjectController {
           as: 'green',
           order: [['createdAt', 'DESC']],
           limit: 30,
+          offset: (page - 1) * 30,
           attributes: [
             'id',
             'infos',
@@ -76,23 +79,14 @@ class ProjectController {
   }
 
   async index(req, res) {
-    const { page = 1 } = req.query;
-
     const ProjectItem = await Project.findByPk(req.params.id, {
       where: { user_id: req.userId },
       order: ['id'],
       include: [
         {
-          model: User,
-          as: 'user',
-          attributes: ['name', 'email'],
-        },
-        {
           model: Green,
           as: 'green',
           order: ['id'],
-          limit: 28,
-          offset: (page - 1) * 28,
           attributes: [
             'id',
             'infos',
