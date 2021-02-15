@@ -20,7 +20,7 @@ class App {
     this.server.use(helmet());
     this.server.use(
       cors({
-        origin: ['http://localhost:3000'],
+        origin: ['https://app.botanicdailydata.com', 'http://localhost:3000'],
         optionsSuccessStatus: 200,
       })
     );
