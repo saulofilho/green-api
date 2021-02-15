@@ -18,7 +18,12 @@ class App {
 
   middlewares() {
     this.server.use(helmet());
-    this.server.use(cors({ origin: 'https://botanicdailydata.com/' }));
+    this.server.use(
+      cors({
+        origin: 'https://app.botanicdailydata.com',
+        optionsSuccessStatus: 200,
+      })
+    );
     this.server.use(express.json());
     this.server.use(
       '/imgs',
