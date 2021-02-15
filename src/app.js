@@ -18,7 +18,7 @@ class App {
 
   middlewares() {
     this.server.use(helmet());
-    this.server.use(cors({ origin: 'https://buenavistalabdatacenter.com' }));
+    this.server.use(cors({ origin: 'https://app.botanicdailydata.com/' }));
     this.server.use(express.json());
     this.server.use(
       '/imgs',
