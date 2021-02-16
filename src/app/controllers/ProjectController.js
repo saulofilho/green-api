@@ -1,5 +1,4 @@
 const Project = require('../models/Project');
-const User = require('../models/User');
 const Green = require('../models/Green');
 const Img = require('../models/Img');
 class ProjectController {
@@ -12,48 +11,6 @@ class ProjectController {
           model: Green,
           as: 'green',
           order: [['id']],
-          attributes: [
-            'id',
-            'infos',
-            'ph_water',
-            'ph_soil',
-            'ec',
-            'temp_max',
-            'temp_min',
-            'moisture',
-            'air_humidity',
-            'plant_size',
-            'phase',
-            'project_id',
-            'img_id',
-            'createdAt',
-            'updatedAt',
-          ],
-        },
-      ],
-    });
-
-    res.json(dataProject);
-  }
-
-  async indexAllLimit(req, res) {
-    const { page = 1 } = req.query;
-
-    const dataProject = await Project.findAll({
-      where: { user_id: req.userId },
-      order: ['id'],
-      include: [
-        {
-          model: User,
-          as: 'user',
-          attributes: ['name', 'email'],
-        },
-        {
-          model: Green,
-          as: 'green',
-          order: [['createdAt', 'DESC']],
-          limit: 30,
-          offset: (page - 1) * 30,
           attributes: [
             'id',
             'infos',
@@ -116,7 +73,7 @@ class ProjectController {
     });
 
     if (ProjectItem === null) {
-      res.json({ error: 'Project not found!' });
+      res.json({ error: 'Harvest not found!' });
     } else {
       res.json(ProjectItem);
     }

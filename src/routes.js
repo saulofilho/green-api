@@ -7,12 +7,16 @@ const SessionController = require('./app/controllers/SessionController');
 const GreenController = require('./app/controllers/GreenController');
 const ProjectController = require('./app/controllers/ProjectController');
 const ImgController = require('./app/controllers/ImgController');
+const CalendarController = require('./app/controllers/CalendarController');
 
 const validateUserStore = require('./app/validators/UserStore');
 const validateSessionStore = require('./app/validators/SessionStore');
 
 const validateProjectStore = require('./app/validators/ProjectStore');
 const validateProjectUpdate = require('./app/validators/ProjectUpdate');
+const validateCalendarStore = require('./app/validators/CalendarStore');
+const validateCalendarUpdate = require('./app/validators/CalendarUpdate');
+const validateCalendarDelete = require('./app/validators/CalendarDelete');
 
 const validateGreenStore = require('./app/validators/GreenStore');
 const validateGreenUpdate = require('./app/validators/GreenUpdate');
@@ -35,11 +39,19 @@ routes.get('/harvest/:id', ProjectController.index);
 routes.post('/harvest', validateProjectStore, ProjectController.store);
 routes.delete('/harvest/:id', ProjectController.delete);
 routes.put('/harvest/:id', validateProjectUpdate, ProjectController.update);
-routes.get('/harvests-month', ProjectController.indexAllLimit);
 
 routes.get('/green/:id', GreenController.index);
 routes.post('/green', validateGreenStore, GreenController.store);
 routes.put('/green/:id', validateGreenUpdate, GreenController.update);
+
+routes.get('/calendar', CalendarController.index);
+routes.post('/calendar', validateCalendarStore, CalendarController.store);
+routes.put('/calendar/:id', validateCalendarUpdate, CalendarController.update);
+routes.delete(
+  '/calendar/:id',
+  validateCalendarDelete,
+  CalendarController.delete
+);
 
 routes.post('/imgs', upload.single('file'), ImgController.store);
 
