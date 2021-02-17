@@ -34,7 +34,7 @@ class ProjectController {
           model: Calendar,
           as: 'calendar',
           order: [['id']],
-          attributes: ['title', 'all_day', 'start', 'end'],
+          attributes: ['id', 'title', 'all_day', 'start', 'end'],
         },
       ],
     });
@@ -75,6 +75,12 @@ class ProjectController {
               attributes: ['id', 'path', 'url', 'name'],
             },
           ],
+        },
+        {
+          model: Calendar,
+          as: 'calendar',
+          order: [['id']],
+          attributes: ['id', 'title', 'all_day', 'start', 'end'],
         },
       ],
     });
