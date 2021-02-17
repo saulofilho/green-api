@@ -1,5 +1,6 @@
 const Project = require('../models/Project');
 const Green = require('../models/Green');
+const Calendar = require('../models/Calendar');
 const Img = require('../models/Img');
 class ProjectController {
   async indexAll(req, res) {
@@ -28,6 +29,12 @@ class ProjectController {
             'createdAt',
             'updatedAt',
           ],
+        },
+        {
+          model: Calendar,
+          as: 'calendar',
+          order: [['id']],
+          attributes: ['title', 'all_day', 'start', 'end'],
         },
       ],
     });
