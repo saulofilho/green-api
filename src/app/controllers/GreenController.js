@@ -23,7 +23,6 @@ class GreenController {
       air_humidity,
       infos,
       img_id,
-      id,
       phase,
       plant_size,
     } = req.body;
@@ -40,7 +39,6 @@ class GreenController {
       air_humidity,
       infos,
       img_id,
-      id,
       phase,
       plant_size,
     });

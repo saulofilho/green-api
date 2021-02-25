@@ -10,6 +10,7 @@ const ImgController = require('./app/controllers/ImgController');
 const CalendarController = require('./app/controllers/CalendarController');
 
 const validateUserStore = require('./app/validators/UserStore');
+const validateUserUpdate = require('./app/validators/UserUpdate');
 const validateSessionStore = require('./app/validators/SessionStore');
 
 const validateProjectStore = require('./app/validators/ProjectStore');
@@ -33,6 +34,7 @@ routes.post('/session', validateSessionStore, SessionController.store);
 routes.use(authMiddleware);
 
 routes.get('/user', UserController.index);
+routes.put('/users', validateUserUpdate, UserController.update);
 
 routes.get('/harvests', ProjectController.indexAll);
 routes.get('/harvest/:id', ProjectController.index);

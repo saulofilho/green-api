@@ -43,12 +43,16 @@ class ProjectController {
   }
 
   async index(req, res) {
+    const { page = 1 } = req.query;
+
     const ProjectItem = await Project.findByPk(req.params.id, {
       where: { user_id: req.userId },
       order: ['id'],
       include: [
         {
           model: Green,
+          limit: 30,
+          offset: (page - 1) * 30,
           as: 'green',
           order: ['id'],
           attributes: [
