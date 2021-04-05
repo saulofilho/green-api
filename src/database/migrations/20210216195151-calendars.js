@@ -9,19 +9,19 @@ module.exports = {
       },
       project_id: {
         type: Sequelize.INTEGER,
-        allowNull: true,
+        allowNull: false,
         references: { model: 'projects', key: 'id' },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
       title: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       all_day: {
         type: Sequelize.BOOLEAN,
-        defaultValue: true,
-        allowNull: true,
+        defaultValue: false,
+        allowNull: false,
       },
       start: {
         type: Sequelize.DATE,

@@ -3,15 +3,16 @@ const Yup = require('yup');
 module.exports = async (req, res, next) => {
   try {
     const schema = Yup.object().shape({
-      infos: Yup.string().required(),
-      phase: Yup.string().required(),
-      ph_water: Yup.number().required(),
-      ph_soil: Yup.number().required(),
-      ec: Yup.number().required(),
-      temp_max: Yup.number().required(),
-      temp_min: Yup.number().required(),
-      air_humidity: Yup.number().required(),
-      moisture: Yup.number().required(),
+      infos: Yup.string(),
+      ph_water: Yup.number(),
+      ph_soil: Yup.number(),
+      ec: Yup.number(),
+      temp_max: Yup.number(),
+      temp_min: Yup.number(),
+      moisture: Yup.number(),
+      air_humidity: Yup.number(),
+      plant_size: Yup.number(),
+      phase: Yup.string(),
     });
 
     await schema.validate(req.body, { abortEarly: false });

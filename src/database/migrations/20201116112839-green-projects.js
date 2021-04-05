@@ -11,52 +11,52 @@ module.exports = {
       },
       user_id: {
         type: Sequelize.INTEGER,
-        allowNull: true,
+        allowNull: false,
         references: { model: 'users', key: 'id' },
       },
       harvest_name: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       infos: {
         type: Sequelize.TEXT,
-        allowNull: true,
+        allowNull: false,
       },
       strain_name: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       breeder: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       flowering_type: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       tools: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       nutrients: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       soil: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       pot_size: {
         type: Sequelize.DECIMAL,
-        allowNull: true,
+        allowNull: false,
       },
       light_schedule: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       grow_techniques: {
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
       },
       created_at: {
         type: Sequelize.DATE,

@@ -6,8 +6,8 @@ module.exports = {
       'imgs',
       [
         {
-          name: 'TORUS (1).png',
-          path: '36a5d3aa56df3581d8473f365e343dcb.png',
+          name: 'bg-plants.jpg',
+          path: '0a90f02d419006e73ece86bbfddd6d1d.jpg',
           created_at: new Date(),
           updated_at: new Date(),
         },
