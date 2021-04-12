@@ -4,8 +4,8 @@ module.exports = async (req, res, next) => {
   try {
     const schema = Yup.object().shape({
       title: Yup.string(),
-      all_day: Yup.string(),
-      start: Yup.string(),
+      all_day: Yup.boolean(),
+      start: Yup.date(),
       end: Yup.date(),
     });
 
