@@ -5,10 +5,11 @@ const Img = require('../app/models/Img');
 const Project = require('../app/models/Project');
 const User = require('../app/models/User');
 const Calendar = require('../app/models/Calendar');
+const MercadoPago = require('../app/models/MercadoPago');
 
 const databaseConfig = require('../config/database');
 
-const models = [Green, User, Img, Project, Calendar];
+const models = [Green, User, Img, Project, Calendar, MercadoPago];
 
 class Database {
   constructor() {

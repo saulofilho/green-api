@@ -27,6 +27,14 @@ const authMiddleware = require('./app/middlewares/auth');
 const routes = new Router();
 const upload = multer(multerConfig);
 
+const MercadoPago = require('./app/utils/MercadoPago');
+
+MercadoPago;
+
+routes.get('/', function (req, res) {
+  res.status(200).send('Home.');
+});
+
 routes.post('/users', validateUserStore, UserController.store);
 routes.post('/session', validateSessionStore, SessionController.store);
 
