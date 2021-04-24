@@ -29,6 +29,8 @@ const upload = multer(multerConfig);
 
 // const MercadoPago = require('./app/utils/MercadoPago');
 routes.post('/mercadopago', (req, res, next) => {
+  console.log('req', req);
+  console.log('req.body', req.body);
   res.status(200).send('ok');
   next();
 });
