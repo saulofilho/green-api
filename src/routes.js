@@ -28,12 +28,22 @@ const routes = new Router();
 const upload = multer(multerConfig);
 
 // const MercadoPago = require('./app/utils/MercadoPago');
+routes.post('/mercadopago', (req, res, next) => {
+  res.status(200).send('ok');
+  next();
+});
 
 // MercadoPago;
 
-routes.get('/', function (req, res) {
-  res.status(200).send('Home.');
-});
+// routes.post('/mercadopago', function (req, res) {
+//   console.log('res--->', req.headers.authorization);
+
+//   const authHeader = req.headers.authorization;
+
+//   if (authHeader === null) {
+//     res.status(200).send('Home.');
+//   }
+// });
 
 routes.post('/users', validateUserStore, UserController.store);
 routes.post('/session', validateSessionStore, SessionController.store);
