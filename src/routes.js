@@ -29,7 +29,6 @@ const routes = new Router();
 const upload = multer(multerConfig);
 
 // const MercadoPago = require('./app/utils/MercadoPago');
-routes.get('/mercadopago', WebhookController.index);
 routes.post('/mercadopago', WebhookController.store);
 // routes.post('/mercadopago', (req, res, next) => {
 //   console.log('req', req);
@@ -62,6 +61,8 @@ routes.post('/session', validateSessionStore, SessionController.store);
 
 // aplica o middleware em todas as rotas abaixo
 routes.use(authMiddleware);
+
+routes.get('/mercadopago', WebhookController.index);
 
 routes.get('/user', UserController.index);
 routes.put('/users', validateUserUpdate, UserController.update);
