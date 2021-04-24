@@ -8,6 +8,7 @@ const GreenController = require('./app/controllers/GreenController');
 const ProjectController = require('./app/controllers/ProjectController');
 const ImgController = require('./app/controllers/ImgController');
 const CalendarController = require('./app/controllers/CalendarController');
+const WebhookController = require('./app/controllers/WebhookController');
 
 const validateUserStore = require('./app/validators/UserStore');
 const validateUserUpdate = require('./app/validators/UserUpdate');
@@ -28,12 +29,21 @@ const routes = new Router();
 const upload = multer(multerConfig);
 
 // const MercadoPago = require('./app/utils/MercadoPago');
-routes.post('/mercadopago', (req, res, next) => {
-  console.log('req', req);
-  console.log('req.body', req.body);
-  res.status(200).send('ok');
-  next();
-});
+routes.get('/mercadopago', WebhookController.index);
+routes.post('/mercadopago', WebhookController.store);
+// routes.post('/mercadopago', (req, res, next) => {
+//   console.log('req', req);
+//   console.log('req.body', req.body);
+//   res.status(200).send('ok');
+//   next();
+// });
+
+// routes.get('/mercadopago', (req, res, next) => {
+//   console.log('req', req);
+//   // console.log('req.body', req.body);
+//   res.status(200).send('ok');
+//   next();
+// });
 
 // MercadoPago;
 

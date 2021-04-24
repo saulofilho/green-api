@@ -6,10 +6,11 @@ const Project = require('../app/models/Project');
 const User = require('../app/models/User');
 const Calendar = require('../app/models/Calendar');
 const MercadoPago = require('../app/models/MercadoPago');
+const Webhook = require('../app/models/Webhook');
 
 const databaseConfig = require('../config/database');
 
-const models = [Green, User, Img, Project, Calendar, MercadoPago];
+const models = [Green, User, Img, Project, Calendar, MercadoPago, Webhook];
 
 class Database {
   constructor() {
