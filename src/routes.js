@@ -9,6 +9,7 @@ const ProjectController = require('./app/controllers/ProjectController');
 const ImgController = require('./app/controllers/ImgController');
 const CalendarController = require('./app/controllers/CalendarController');
 const WebhookController = require('./app/controllers/WebhookController');
+const PaymentsController = require('./app/controllers/PaymentsController');
 
 const validateUserStore = require('./app/validators/UserStore');
 const validateUserUpdate = require('./app/validators/UserUpdate');
@@ -29,40 +30,21 @@ const routes = new Router();
 const upload = multer(multerConfig);
 
 // const MercadoPago = require('./app/utils/MercadoPago');
+
+// mercadopago
 routes.post('/mercadopago', WebhookController.store);
-// routes.post('/mercadopago', (req, res, next) => {
-//   console.log('req', req);
-//   console.log('req.body', req.body);
-//   res.status(200).send('ok');
-//   next();
-// });
+routes.post('/payments', PaymentsController.store);
 
-// routes.get('/mercadopago', (req, res, next) => {
-//   console.log('req', req);
-//   // console.log('req.body', req.body);
-//   res.status(200).send('ok');
-//   next();
-// });
-
-// MercadoPago;
-
-// routes.post('/mercadopago', function (req, res) {
-//   console.log('res--->', req.headers.authorization);
-
-//   const authHeader = req.headers.authorization;
-
-//   if (authHeader === null) {
-//     res.status(200).send('Home.');
-//   }
-// });
-
+// user
 routes.post('/users', validateUserStore, UserController.store);
 routes.post('/session', validateSessionStore, SessionController.store);
 
-// aplica o middleware em todas as rotas abaixo
+// apply middleware
 routes.use(authMiddleware);
 
 routes.get('/mercadopago', WebhookController.index);
+
+// routes.get('/payments', PaymentsController.index);
 
 routes.get('/user', UserController.index);
 routes.put('/users', validateUserUpdate, UserController.update);

@@ -1,18 +1,25 @@
+'use strict';
+
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    return queryInterface.createTable('mercadopagos', {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('payments', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
       },
-      user_id: {
-        type: Sequelize.INTEGER,
+      email: {
+        type: Sequelize.STRING,
         allowNull: false,
-        references: { model: 'users', key: 'id' },
+        unique: true,
+        isEmail: true,
       },
-      status: {
+      status_payment: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      plan_id: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -27,7 +34,7 @@ module.exports = {
     });
   },
 
-  down: async (queryInterface) => {
-    return queryInterface.dropTable('mercadopagos');
+  down: (queryInterface) => {
+    return queryInterface.dropTable('payments');
   },
 };
