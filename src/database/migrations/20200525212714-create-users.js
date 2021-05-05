@@ -28,6 +28,14 @@ module.exports = {
         defaultValue: false,
         allowNull: false,
       },
+      status_payment: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      plan_id: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

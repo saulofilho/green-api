@@ -1,19 +1,65 @@
+const axios = require('axios');
 const User = require('../models/User');
 
 class UserController {
   async store(req, res) {
-    const userExists = await User.findOne({
-      where: {
-        email: req.body.email,
-      },
-    });
-
-    if (userExists) {
-      return res.status(400).json({
-        error: 'User already exists.',
+    const apiRequest = await axios
+      .get(
+        `https://api.mercadopago.com/preapproval/search?preapproval_plan_id=${process.env.PLAN_ID}`,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.YOUR_ACCESS_TOKEN}`,
+          },
+        }
+      )
+      .then((response) => {
+        return response.data;
+      })
+      .catch((err) => {
+        console.log(err.message);
       });
-    }
 
+    const { results } = apiRequest;
+
+    const { email, password } = req.body;
+
+    const checkEmail = results
+      .filter((el) => el.payer_email === email)
+      .map((el) => el.payer_email)
+      .toString();
+
+    if (checkEmail) {
+      const filterResult = results.filter((el) => el.payer_email === email);
+      const statusValue = filterResult.map((el) => el.status).toString();
+      const nameValue = filterResult
+        .map((el) => el.payer_first_name)
+        .toString();
+      const planID = filterResult
+        .map((el) => el.preapproval_plan_id)
+        .toString();
+
+      const saveData = await User.create({
+        email: checkEmail,
+        status_payment: statusValue,
+        plan_id: planID,
+        name: nameValue,
+        password,
+      });
+
+      return res.json({
+        id: saveData.id,
+        email: checkEmail,
+        name: nameValue,
+        status_payment: statusValue,
+        plan_id: planID,
+        admin: saveData.admin,
+      });
+    } else {
+      res.json({ error: 'Ops! Something was wrong.' });
+    }
+  }
+
+  async storeAdmin(req, res) {
     const { id, name, email, admin } = await User.create(req.body);
 
     return res.json({
@@ -30,7 +76,7 @@ class UserController {
     });
 
     if (greenItem === null) {
-      res.json({ error: 'Green not found!' });
+      res.json({ error: 'User not found.' });
     } else {
       res.json(greenItem);
     }

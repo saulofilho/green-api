@@ -2,34 +2,6 @@ const axios = require('axios');
 const Payments = require('../models/Payments');
 
 class PaymentsController {
-  // async index(req, res) {
-  //   const apiResponse = await axios
-  //     .get(
-  //       `https://api.mercadopago.com/preapproval/search?preapproval_plan_id=${process.env.PLAN_ID}`,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${process.env.YOUR_ACCESS_TOKEN}`,
-  //         },
-  //       }
-  //     )
-  //     .then((response) => {
-  //       console.log('apiResponse------->', response.data);
-  //       return response;
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-
-  //   const { results } = apiResponse.data;
-
-  //   // const allResultsStringify = JSON.stringify(results);
-
-  //   const status = results.filter((item) => item.status === 'authorized');
-
-  //   console.log('status-------->', status);
-  //   return results;
-  // }
-
   async store(req, res) {
     const apiResponse = await axios
       .get(
@@ -50,6 +22,8 @@ class PaymentsController {
       });
 
     const { results } = apiResponse;
+
+    console.log('results', results);
 
     const { email } = req.body;
 

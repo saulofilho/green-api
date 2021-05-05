@@ -10,6 +10,8 @@ class User extends Model {
         password: Sequelize.VIRTUAL,
         password_hash: Sequelize.STRING,
         admin: Sequelize.BOOLEAN,
+        status_payment: Sequelize.STRING,
+        plan_id: Sequelize.STRING,
       },
       {
         sequelize,
