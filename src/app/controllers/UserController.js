@@ -28,6 +28,10 @@ class UserController {
       .map((el) => el.payer_email)
       .toString();
 
+    if (!checkEmail) {
+      res.json({ error: 'Ops! Something was wrong.' });
+    }
+
     if (checkEmail) {
       const filterResult = results.filter((el) => el.payer_email === email);
       const statusValue = filterResult.map((el) => el.status).toString();
@@ -54,8 +58,6 @@ class UserController {
         plan_id: planID,
         admin: saveData.admin,
       });
-    } else {
-      res.json({ error: 'Ops! Something was wrong.' });
     }
   }
 

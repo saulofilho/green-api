@@ -33,7 +33,7 @@ const upload = multer(multerConfig);
 routes.post('/mercadopago', WebhookController.store);
 routes.post('/payments', PaymentsController.store);
 
-// user
+// create user
 routes.post('/users', validateUserStore, UserController.store);
 routes.post('/admin', UserController.storeAdmin);
 routes.post('/session', validateSessionStore, SessionController.store);
