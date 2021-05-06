@@ -92,6 +92,18 @@ class UserController {
     }
   }
 
+  async indexAdmin(req, res) {
+    const greenItem = await User.findAll({
+      where: { id: req.userId },
+    });
+
+    if (greenItem === null) {
+      res.json({ error: 'User not found.' });
+    } else {
+      res.json(greenItem);
+    }
+  }
+
   async update(req, res) {
     const { email, oldPassword } = req.body;
 
