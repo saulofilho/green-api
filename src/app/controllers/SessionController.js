@@ -27,21 +27,14 @@ class SessionController {
 
     await Mail.sendMail({
       to: `${user.name} <${user.email}>`,
-      subject: 'Your data.',
-      text: 'teste',
+      subject: 'Welcome to Botanic Daily Data.',
+      template: 'welcome',
+      context: {
+        user: user.name,
+        email: user.email,
+        password: password,
+      },
     });
-    // await Mail.sendMail({
-    //   to: `${user.name} <${user.email}>`,
-    //   subject: 'Agendamento cancelado.',
-    //   template: 'cancellation',
-    //   context: {
-    //     provider: user.provider.name,
-    //     user: user.user.name,
-    //     date: format(parseISO(user.date), "'dia' dd 'de' MMM', às' H:mm'h'", {
-    //       locale: pt,
-    //     }),
-    //   },
-    // });
 
     return res.json({
       user: {
