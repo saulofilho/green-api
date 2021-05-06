@@ -5,6 +5,13 @@ const authConfig = require('../../config/auth');
 
 const Mail = require('../../lib/Mail');
 
+// const mailgun = require('mailgun-js');
+// const DOMAIN =
+//   'https://api.mailgun.net/v3/sandbox6a493d46863b4168abc8a76ae3856d1e.mailgun.org';
+// const mg = mailgun({
+//   apiKey: process.env.API_KEY,
+//   domain: DOMAIN,
+// });
 class SessionController {
   async store(req, res) {
     const { email, password } = req.body;
@@ -51,3 +58,14 @@ class SessionController {
 }
 
 module.exports = new SessionController();
+
+// const data = {
+//   from: 'Botanic Daily Data <hi@buenavistalab.com>',
+//   to: `${user.name} <${user.email}>`,
+//   subject: 'Welcome to Botanic Daily Data.',
+//   text: 'Testing some Mailgun awesomness!',
+// };
+// mg.messages().send(data, function (error, body) {
+//   console.log('body---->', body);
+//   console.log('error---->', error);
+// });
