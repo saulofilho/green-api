@@ -23,16 +23,24 @@ class UserController {
 
     const { email, password } = req.body;
 
+    const findEmail = await User.findOne({
+      where: { email: email },
+    });
+
     const checkEmail = results
       .filter((el) => el.payer_email === email)
       .map((el) => el.payer_email)
       .toString();
 
-    if (!checkEmail) {
-      res.json({ error: 'Ops! Something was wrong.' });
-    }
-
-    if (checkEmail) {
+    if (
+      (checkEmail && findEmail !== null) ||
+      checkEmail === findEmail ||
+      (!checkEmail && findEmail === null)
+    ) {
+      return res.status(400).json({
+        error: 'Ops! Something was wrong.',
+      });
+    } else {
       const filterResult = results.filter((el) => el.payer_email === email);
       const statusValue = filterResult.map((el) => el.status).toString();
       const nameValue = filterResult
