@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const authConfig = require('../../config/auth');
 
-const Mail = require('../lib/Mail');
+const Mail = require('../../lib/Mail');
 
 class SessionController {
   async store(req, res) {

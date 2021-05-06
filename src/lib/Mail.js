@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer');
 const { resolve } = require('path');
 const nodemailerhbs = require('nodemailer-express-handlebars');
 const exphbs = require('express-handlebars');
-const mailConfig = require('../../config/mail');
+const mailConfig = require('../config/mail');
 
 class Mail {
   constructor() {
@@ -19,7 +19,7 @@ class Mail {
   }
 
   configureTemplates() {
-    const viewPath = resolve(__dirname, '..', 'views', 'emails');
+    const viewPath = resolve(__dirname, '..', 'app', 'views', 'emails');
 
     this.transporter.use(
       'compile',
