@@ -9,6 +9,7 @@ class Mail {
     const { host, port, secure, auth } = mailConfig;
 
     this.transporter = nodemailer.createTransport({
+      // service: 'gmail',
       host,
       port,
       secure,

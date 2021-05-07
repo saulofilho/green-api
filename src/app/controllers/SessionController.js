@@ -32,16 +32,16 @@ class SessionController {
 
     const { id, name, admin } = user;
 
-    // await Mail.sendMail({
-    //   to: `${user.name} <${user.email}>`,
-    //   subject: 'Welcome to Botanic Daily Data.',
-    //   template: 'welcome',
-    //   context: {
-    //     user: user.name,
-    //     email: user.email,
-    //     password: password,
-    //   },
-    // });
+    await Mail.sendMail({
+      to: `${user.name} <${user.email}>`,
+      subject: 'Welcome to Botanic Daily Data.',
+      template: 'welcome',
+      context: {
+        user: user.name,
+        email: user.email,
+        password: password,
+      },
+    });
 
     return res.json({
       user: {
