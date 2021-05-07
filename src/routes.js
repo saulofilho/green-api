@@ -40,7 +40,7 @@ routes.post('/session', validateSessionStore, SessionController.store);
 // apply middleware
 routes.use(authMiddleware);
 
-routes.get('/mercadopagos', WebhookController.index);
+routes.get('/mercadopago', WebhookController.index);
 
 routes.get('/admins', UserController.indexAll);
 
