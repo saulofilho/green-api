@@ -35,7 +35,6 @@ routes.post('/payments', PaymentsController.store);
 
 // create user
 routes.post('/users', validateUserStore, UserController.store);
-routes.post('/admin', UserController.storeAdmin);
 routes.post('/session', validateSessionStore, SessionController.store);
 
 // apply middleware
@@ -43,7 +42,7 @@ routes.use(authMiddleware);
 
 routes.get('/mercadopagos', WebhookController.index);
 
-routes.get('/admins', UserController.indexAdmin);
+routes.get('/admins', UserController.indexAll);
 
 routes.get('/user', UserController.index);
 routes.put('/users', validateUserUpdate, UserController.update);

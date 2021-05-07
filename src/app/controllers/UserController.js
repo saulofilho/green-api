@@ -21,52 +21,69 @@ class UserController {
 
     const { results } = apiRequest;
 
-    const { email, password } = req.body;
-
-    const findEmail = await User.findOne({
-      where: { email: email },
-    });
+    const { email, password, admin } = req.body;
 
     const checkEmail = results
       .filter((el) => el.payer_email === email)
       .map((el) => el.payer_email)
       .toString();
 
-    if (
-      (checkEmail && findEmail !== null) ||
-      checkEmail === findEmail ||
-      (!checkEmail && findEmail === null)
-    ) {
+    const findEmail = await User.findOne({
+      where: { email: email },
+    });
+
+    const userNull = checkEmail && findEmail !== null;
+    const emailExist = checkEmail === findEmail;
+    const emailNull = !checkEmail && findEmail === null;
+    const adminExist = admin === true;
+
+    if (adminExist) {
+      const {
+        name,
+        email,
+        password,
+        admin,
+        status_payment,
+        plan_id,
+      } = await User.create(req.body);
+
+      return res.json({
+        name,
+        email,
+        password,
+        admin,
+        status_payment,
+        plan_id,
+      });
+    }
+
+    if (userNull || emailExist || emailNull) {
       return res.status(400).json({
         error: 'Ops! Something was wrong.',
       });
-    } else {
-      const filterResult = results.filter((el) => el.payer_email === email);
-      const statusValue = filterResult.map((el) => el.status).toString();
-      const nameValue = filterResult
-        .map((el) => el.payer_first_name)
-        .toString();
-      const planID = filterResult
-        .map((el) => el.preapproval_plan_id)
-        .toString();
-
-      const saveData = await User.create({
-        email: checkEmail,
-        status_payment: statusValue,
-        plan_id: planID,
-        name: nameValue,
-        password,
-      });
-
-      return res.json({
-        id: saveData.id,
-        email: checkEmail,
-        name: nameValue,
-        status_payment: statusValue,
-        plan_id: planID,
-        admin: saveData.admin,
-      });
     }
+
+    const filterResult = results.filter((el) => el.payer_email === email);
+    const statusValue = filterResult.map((el) => el.status).toString();
+    const nameValue = filterResult.map((el) => el.payer_first_name).toString();
+    const planID = filterResult.map((el) => el.preapproval_plan_id).toString();
+
+    const saveData = await User.create({
+      email: checkEmail,
+      status_payment: statusValue,
+      plan_id: planID,
+      name: nameValue,
+      password,
+    });
+
+    return res.json({
+      id: saveData.id,
+      email: checkEmail,
+      name: nameValue,
+      status_payment: statusValue,
+      plan_id: planID,
+      admin: saveData.admin,
+    });
   }
 
   async storeAdmin(req, res) {
@@ -92,16 +109,10 @@ class UserController {
     }
   }
 
-  async indexAdmin(req, res) {
-    const greenItem = await User.findAll({
-      where: { id: req.userId },
-    });
+  async indexAll(req, res) {
+    const findUser = await User.findAll();
 
-    if (greenItem === null) {
-      res.json({ error: 'User not found.' });
-    } else {
-      res.json(greenItem);
-    }
+    res.json(findUser);
   }
 
   async update(req, res) {
