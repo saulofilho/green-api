@@ -80,16 +80,16 @@ class SessionController {
       return res.status(401).json({ error: 'Check your payment, please.' });
     }
 
-    await Mail.sendMail({
-      to: `${user.name} <${user.email}>`,
-      subject: 'Welcome to Botanic Daily Data.',
-      template: 'welcome',
-      context: {
-        user: user.name,
-        email: user.email,
-        password: password,
-      },
-    });
+    // await Mail.sendMail({
+    //   to: `${user.name} <${user.email}>`,
+    //   subject: 'Welcome to Botanic Daily Data.',
+    //   template: 'welcome',
+    //   context: {
+    //     user: user.name,
+    //     email: user.email,
+    //     password: password,
+    //   },
+    // });
 
     return res.json({
       user: {
