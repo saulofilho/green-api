@@ -134,6 +134,16 @@ class UserController {
     res.json(findUser);
   }
 
+  async delete(req, res) {
+    const userDelete = await User.findOne({
+      where: { email: req.params.email },
+    });
+
+    await userDelete.destroy();
+
+    return res.json(userDelete);
+  }
+
   async update(req, res) {
     const { email, oldPassword } = req.body;
 

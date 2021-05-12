@@ -46,6 +46,7 @@ routes.get('/admins', UserController.indexAll);
 
 routes.get('/user', UserController.index);
 routes.put('/users', validateUserUpdate, UserController.update);
+routes.delete('/user/:email', UserController.delete);
 
 routes.get('/harvests', ProjectController.indexAll);
 routes.get('/harvest/:id', ProjectController.index);
