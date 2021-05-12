@@ -139,7 +139,9 @@ class UserController {
       where: { email: req.params.email },
     });
 
-    await userDelete.destroy();
+    if (userDelete !== null) {
+      await userDelete.destroy();
+    }
 
     return res.json(userDelete);
   }

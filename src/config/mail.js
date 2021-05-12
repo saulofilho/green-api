@@ -1,4 +1,5 @@
 if (process.env.NODE_ENV === 'development') {
+  console.log('DEV');
   module.exports = {
     service: process.env.MAIL_SERVICE,
     host: process.env.MAIL_HOST,
@@ -13,6 +14,7 @@ if (process.env.NODE_ENV === 'development') {
     },
   };
 } else {
+  console.log('PROD');
   module.exports = {
     service: process.env.MAIL_SERVICE_PROD,
     host: process.env.MAIL_HOST_PROD,
