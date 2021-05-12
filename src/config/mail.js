@@ -12,9 +12,7 @@ if (process.env.NODE_ENV === 'development') {
       from: 'Botanic Daily Data <hi@buenavistalab.com>',
     },
   };
-}
-
-if (process.env.NODE_ENV === 'production') {
+} else {
   module.exports = {
     service: process.env.MAIL_SERVICE_PROD,
     host: process.env.MAIL_HOST_PROD,
