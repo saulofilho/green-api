@@ -6,10 +6,10 @@ const mailConfig = require('../config/mail');
 
 class Mail {
   constructor() {
-    const { host, port, secure, auth } = mailConfig;
+    const { service, host, port, secure, auth } = mailConfig;
 
     this.transporter = nodemailer.createTransport({
-      // service: 'gmail',
+      service,
       host,
       port,
       secure,

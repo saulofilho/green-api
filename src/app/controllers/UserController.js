@@ -1,6 +1,8 @@
 const axios = require('axios');
 const User = require('../models/User');
 
+const Mail = require('../../lib/Mail');
+
 class UserController {
   async store(req, res) {
     const apiRequest = await axios
@@ -53,6 +55,17 @@ class UserController {
         plan_id,
       } = await User.create(req.body);
 
+      await Mail.sendMail({
+        to: `${name} <${email}>`,
+        subject: `Welcome, ${name}, to Botanic Daily Data.`,
+        template: 'welcome',
+        context: {
+          user: name,
+          email: email,
+          password: password,
+        },
+      });
+
       return res.json({
         name,
         email,
@@ -80,6 +93,17 @@ class UserController {
       plan_id: planID,
       name: nameValue,
       password,
+    });
+
+    await Mail.sendMail({
+      to: `${nameValue} <${checkEmail}>`,
+      subject: `Welcome, ${nameValue}, to Botanic Daily Data.`,
+      template: 'welcome',
+      context: {
+        user: nameValue,
+        email: checkEmail,
+        password: password,
+      },
     });
 
     return res.json({

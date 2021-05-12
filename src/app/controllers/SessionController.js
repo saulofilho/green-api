@@ -4,15 +4,6 @@ const axios = require('axios');
 const User = require('../models/User');
 const authConfig = require('../../config/auth');
 
-const Mail = require('../../lib/Mail');
-
-// const mailgun = require('mailgun-js');
-// const DOMAIN =
-//   'https://api.mailgun.net/v3/sandbox6a493d46863b4168abc8a76ae3856d1e.mailgun.org';
-// const mg = mailgun({
-//   apiKey: process.env.API_KEY,
-//   domain: DOMAIN,
-// });
 class SessionController {
   async store(req, res) {
     const apiRequest = await axios
@@ -34,11 +25,6 @@ class SessionController {
     const { results } = apiRequest;
 
     const { email, password } = req.body;
-
-    // const checkCancelled = results
-    //   .filter((el) => el.status === 'cancelled')
-    //   .map((el) => el.status)
-    //   .toString();
 
     const checkEmail = results
       .filter((el) => el.payer_email === email)
@@ -74,22 +60,8 @@ class SessionController {
         status_payment: checkPayment,
       });
 
-      // return res.json({
-      //   checkPayment,
-      // });
       return res.status(401).json({ error: 'Check your payment, please.' });
     }
-
-    // await Mail.sendMail({
-    //   to: `${user.name} <${user.email}>`,
-    //   subject: 'Welcome to Botanic Daily Data.',
-    //   template: 'welcome',
-    //   context: {
-    //     user: user.name,
-    //     email: user.email,
-    //     password: password,
-    //   },
-    // });
 
     return res.json({
       user: {
@@ -107,14 +79,3 @@ class SessionController {
 }
 
 module.exports = new SessionController();
-
-// const data = {
-//   from: 'Botanic Daily Data <hi@buenavistalab.com>',
-//   to: `${user.name} <${user.email}>`,
-//   subject: 'Welcome to Botanic Daily Data.',
-//   text: 'Testing some Mailgun awesomness!',
-// };
-// mg.messages().send(data, function (error, body) {
-//   console.log('body---->', body);
-//   console.log('error---->', error);
-// });
