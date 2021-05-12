@@ -29,13 +29,19 @@ class UserController {
       .toString();
 
     const findEmail = await User.findOne({
-      where: { email: email },
+      where: { email: req.body.email },
     });
 
     const userNull = checkEmail && findEmail !== null;
     const emailExist = checkEmail === findEmail;
     const emailNull = !checkEmail && findEmail === null;
-    const adminExist = admin === true;
+    const adminExist = admin;
+
+    if (findEmail) {
+      return res.status(400).json({
+        error: 'User already exists.',
+      });
+    }
 
     if (adminExist) {
       const {
@@ -83,17 +89,6 @@ class UserController {
       status_payment: statusValue,
       plan_id: planID,
       admin: saveData.admin,
-    });
-  }
-
-  async storeAdmin(req, res) {
-    const { id, name, email, admin } = await User.create(req.body);
-
-    return res.json({
-      id,
-      name,
-      email,
-      admin,
     });
   }
 
