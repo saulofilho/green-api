@@ -37,7 +37,7 @@ class UserController {
     const userNull = checkEmail && findEmail !== null;
     const emailExist = checkEmail === findEmail;
     const emailNull = !checkEmail && findEmail === null;
-    const adminExist = admin;
+    const adminExist = admin === true || admin === false;
 
     if (findEmail) {
       return res.status(400).json({
