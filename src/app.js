@@ -35,11 +35,8 @@ class App {
     this.server.use(express.json());
     this.server.use(
       '/imgs',
-      express.static(path.resolve(__dirname, '..', 'tmp', 'uploads')),
-      cors({
-        origin: ['https://app.botanicdailydata.com', 'http://localhost:3000'],
-        optionsSuccessStatus: 200,
-      })
+      cors(),
+      express.static(path.resolve(__dirname, '..', 'tmp', 'uploads'))
     );
   }
 
