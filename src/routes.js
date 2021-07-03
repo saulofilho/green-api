@@ -42,7 +42,7 @@ routes.use(authMiddleware);
 
 routes.get('/mercadopago', WebhookController.index);
 
-routes.get('/admins', UserController.indexAll);
+routes.get('/all', UserController.indexAll);
 
 routes.get('/user', UserController.index);
 routes.put('/users', validateUserUpdate, UserController.update);

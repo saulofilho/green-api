@@ -153,9 +153,6 @@ class UserController {
       where: { email },
     });
 
-    console.log('oldPassword---->', oldPassword);
-    console.log('xxx---->', await user.checkPassword(oldPassword));
-
     if (oldPassword && !(await user.checkPassword(oldPassword))) {
       return res.status(401).json({ error: 'Password does not match.' });
     }
